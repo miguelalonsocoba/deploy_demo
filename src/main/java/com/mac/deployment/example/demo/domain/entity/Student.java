@@ -1,11 +1,28 @@
 package com.mac.deployment.example.demo.domain.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "STUDENTS")
 public class Student {
 
+    @Id
+    @Column(name = "ID")
     private Integer id;
+
+    @Column(name = "NAME", nullable = false)
     private String name;
+
+    @Column(name = "LAST_NAME", nullable = false)
     private String lastName;
+
+    @Column(name = "AGE", nullable = false)
     private int age;
+
+    @Column(name = "DEGREE", nullable = false)
     private String degree;
 
     public Student() {}
